@@ -104,8 +104,7 @@
 		<!-- For email templates -->
 		<dependency>
 			<groupId>org.thymeleaf</groupId>
-			<artifactId>thymeleaf-spring5</artifactId>
-			<version>3.1.1.RELEASE</version>
+			<artifactId>thymeleaf-spring6</artifactId>
 		</dependency>
 
 
