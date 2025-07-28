@@ -19,7 +19,7 @@ public class EmailService {
     @Async
     public void sendVerificationEmail(String to, String name, String token) {
         try {
-            String verificationUrl = "http://yourdomain.com/api/auth/verify-email?token=" + token;
+            String verificationUrl = "http://localhost:8080/api/auth/verify-email?token=" + token;
 
             Context context = new Context();
             context.setVariable("name", name);

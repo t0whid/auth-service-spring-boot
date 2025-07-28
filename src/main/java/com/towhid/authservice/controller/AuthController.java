@@ -40,6 +40,13 @@ public class AuthController {
         );
     }
 
+    @GetMapping("/verify-email")
+    public ResponseEntity<ApiResponse> verifyEmailGet(
+            @RequestParam("token") String token) {
+        VerificationRequest request = new VerificationRequest();
+        request.setToken(token);
+        return verifyEmail(request);
+    }
     @PostMapping("/verify-email")
     public ResponseEntity<ApiResponse> verifyEmail(@Valid @RequestBody VerificationRequest request) {
         AuthResponse response = authService.verifyEmail(request);
